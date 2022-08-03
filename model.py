@@ -9,6 +9,7 @@ from sklearn.ensemble import RandomForestClassifier
 import time
 from sklearn.metrics import accuracy_score
 import numpy as np
+import pickle
 
 
 class NLPClassifier:
@@ -66,7 +67,6 @@ class NLPClassifier:
         X_test_transformed = self.count_vectorizer.transform(X_test)
         X_test_transformed = self.transformer.transform(X_test_transformed)
 
-
         self.rf = RandomForestClassifier(n_estimators = 150)
         self.rf.fit(X_train_transformed, y_train)
 
@@ -81,4 +81,9 @@ class NLPClassifier:
 
         print("The category of this article is: ", self.rf.predict(input_data)[0])
 
+    def save_model(self):
+        pickle.dump(self.rf, open("model.sav", 'wb'))
         
+    def load_model(self):
+        loaded_model = pickle.load(open("model.sav", 'rb'))
+        self.rf = loaded_model
