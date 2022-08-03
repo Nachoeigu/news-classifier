@@ -1,5 +1,6 @@
 from news_extractor import TodoNoticias
 from constants import MAIN_TOPICS
+from model import NLPClassifier
 
 bot = TodoNoticias()
 
@@ -11,4 +12,12 @@ bot = TodoNoticias()
 
 # bot.save_csv("todo_noticias_articles")
 
-bot.load_files("todo_noticias_full_articles")
+data = bot.load_files("todo_noticias_full_articles")
+
+algorithm = NLPClassifier(data)
+
+algorithm.preprocessing()
+
+algorithm.modelling()
+
+algorithm.predict("some text...")
