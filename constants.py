@@ -15,3 +15,7 @@ TN_HEADERS = {
     'upgrade-insecure-requests': '1',
     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36',
 }
+
+MORE_STOPWORDS = [
+    "ano","anos", "uno","dos","tres","cuatro","cinco","seis","siete","ocho","nueve","diez","dia","do","dijo","segun","ademas","despues","tras","luego","me","solo","vez","hace","mientras","asi","ahora","hoy","cada","bien","hacer","hizo","aunque","gran","va","dio","hacia","sido","lunes","martes","miercoles","jueves","viernes","casi","quedo","explico","agrego","aun","conto","podria","habria","afirmo","pueden","tn","partir","decir","\(\)","tan","dar","alli","misma","comenzo","informo","debe","ir","van","sigue","uso","ahi","dice","da", "puede","cuenta","frente","tener","haber","junto","hecho","ver","aseguro","sino","senalo","()","seguir"
+    ]
